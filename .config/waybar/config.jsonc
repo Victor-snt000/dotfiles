@@ -1,0 +1,68 @@
+{
+    "position": "top",
+    "margin-top": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "tray"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "custom/cpu-temp",
+        "custom/gpu-temp",
+        "memory"
+    ],
+    "clock": {
+        "interval": 60,
+        "format": "{:%d-%m-%Y %A %H:%M}",
+        "max-length": 35
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+             "1": [], "2":[], "3":[], "4":[], "5":[],
+             "6":[], "7":[], "8":[], "9":[], "10":[]
+        }
+    },
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10,
+        "icons": {
+            "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        }
+    },
+        "custom/cpu-temp": {
+        "exec": "sensors | awk '/Package id 0/{print $4}' | tr -d '+'",
+        "interval": 5,
+        "format": "| CPU {} "
+    },
+    "custom/gpu-temp": {
+        "exec": "sensors | awk '/edge:/ {print $2}' | head -n 1 | tr -d '+'",
+        "interval": 5,
+        "format": "| GPU {} "
+    },
+    "cpu": {
+    "interval": 5,
+        "format": "| CPU {usage}% "
+    },
+    "memory": {
+        "format": "| RAM {}% "
+    },
+    "pulseaudio": {
+        "format": "VOL {volume}% ",
+        "format-muted": "VOL MUTED",
+        "scroll-step": 1,
+        "max-volume": 153,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1.53 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
+    }
+}
