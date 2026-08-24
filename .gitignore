@@ -1,0 +1,48 @@
+# Catch-all: only explicitly `git add`-ed files are tracked in this repo,
+# but this file exists as a safety net in case a broad `add` is ever run.
+
+# Secrets / credentials
+.ssh/
+.gnupg/
+.pki/
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*token*
+*.env
+.netrc
+
+# Shell / command history
+.bash_history
+.zsh_history
+.python_history
+.*_history
+
+# Caches and local state
+.cache/
+.local/share/
+.npm/
+.cargo/registry/
+.dotnet/
+
+# App data with personal/sensitive content
+.config/BraveSoftware/
+.config/keepassxc/
+.config/obsidian/
+.config/vesktop/
+.config/stremio-enhanced/
+.config/Code/
+.config/dconf/
+.config/gtk-3.0/bookmarks
+.config/pulse/
+.config/pipewire/
+
+# Logs and install artifacts
+*.log
+install.log
+
+# OS/editor noise
+.DS_Store
+*.swp
+*~
