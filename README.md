@@ -4,7 +4,9 @@ Personal Linux desktop configuration for Arch Linux + Hyprland, kept close to th
 
 ## Showcase
 
-_Screenshots coming soon._
+| Desktop | Terminal | System monitor |
+|---|---|---|
+| ![Desktop](screenshots/desktop.png) | ![Fastfetch](screenshots/fastfetch.png) | ![btop](screenshots/btop.png) |
 
 ## What's here
 
