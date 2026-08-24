@@ -77,4 +77,4 @@ After placing the files, review:
 
 ## Scope
 
-This repo is managed as a bare Git repository tracking `$HOME` directly, so only files explicitly added with `git add` are tracked — nothing is captured implicitly. Application state, caches, credentials, and machine-specific tweaks (kernel/sysctl/udev tuning) are intentionally kept out of this repo.
+This repo is managed as a bare Git repository tracking $HOME directly, so only files explicitly added with git add are tracked — nothing is captured implicitly. A .gitignore is also kept as a safety net against secrets, caches, and machine-specific tweaks (kernel/sysctl/udev tuning) ever being added by accident.
