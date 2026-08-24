@@ -73,6 +73,6 @@ After placing the files, review:
 - `kitty/kitty.conf` for font family and size.
 - `.zshrc` for Oh My Zsh plugins/theme and any machine-specific aliases.
 
-## Repository Hygiene
+## Scope
 
 This repo is managed as a bare Git repository tracking `$HOME` directly, so only files explicitly added with `git add` are tracked — nothing is captured implicitly. Application state, caches, credentials, and machine-specific tweaks (kernel/sysctl/udev tuning) are intentionally kept out of this repo.
