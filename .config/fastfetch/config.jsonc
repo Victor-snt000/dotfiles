@@ -30,6 +30,11 @@
       "key": "distro"
     },
     {
+      "type": "command",
+      "key": "host",
+      "text": "cat /sys/class/dmi/id/board_name"
+    },
+    {
       "type": "kernel",
       "key": "kernel"
     },
@@ -43,8 +48,8 @@
       "combined": true
     },
     {
-      "type": "shell",
-      "key": "shell"
+      "type": "display",
+      "key": "display"
     },
     {
       "type": "de",
@@ -53,6 +58,26 @@
     {
       "type": "wm",
       "key": "wm"
+    },
+    {
+      "type": "theme",
+      "key": "theme"
+    },
+    {
+      "type": "icons",
+      "key": "icons"
+    },
+    {
+      "type": "font",
+      "key": "font"
+    },
+    {
+      "type": "cursor",
+      "key": "cursor"
+    },
+    {
+      "type": "shell",
+      "key": "shell"
     },
     {
       "type": "terminal",
