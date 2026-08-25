@@ -67,7 +67,7 @@
     },
     "pulseaudio": {
         "format": " | VOL {volume}% ",
-        "format-muted": "VOL MUTED",
+        "format-muted": " | VOL MUTED ",
         "scroll-step": 1,
         "max-volume": 153,
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",

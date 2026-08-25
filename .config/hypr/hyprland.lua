@@ -134,7 +134,8 @@ hl.window_rule({
 -- 7. CONFIGURAÇÕES GERAIS
 hl.config({
     input = {
-        kb_layout = "us",
+        kb_layout = "us,br",
+        kb_options = "grp:alt_caps_toggle",
         follow_mouse = 1,
         sensitivity = 0,
         accel_profile = "flat",
