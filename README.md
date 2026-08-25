@@ -6,7 +6,7 @@ Personal Linux desktop configuration for Arch Linux + Hyprland, kept close to th
 
 | Desktop | Terminal | System monitor |
 |---|---|---|
-| ![Desktop](screenshots/desktop.png) | ![Fastfetch](screenshots/fastfetch.png) | ![btop](screenshots/btop.png) |
+| ![Desktop](Pictures/Screenshots/desktop.png) | ![Fastfetch](Pictures/Screenshots/fastfetch.png) | ![btop](Pictures/Screenshots/btop.png) |
 
 ## What's here
 
