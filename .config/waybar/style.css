@@ -1,5 +1,4 @@
 @import 'colors/one-dark.css';
-
 *{
     border: none;
     border-radius: 0px;
@@ -12,15 +11,12 @@
 window#waybar{
     background-color: black;
 }
-
 .modules-left{
     margin-left: 12px;
 }
-
 .modules-right{
     margin-right: 0px;
 }
-
 #workspaces{
     background-color: @bg0;
     padding: 5px 3px;
@@ -29,7 +25,6 @@ window#waybar{
     border: 1px solid black;
     color: @fg;
 }
-
 #workspaces button{
     padding: 0px 6px;
     margin: 0px 3px;
@@ -38,31 +33,30 @@ window#waybar{
     background-color: @bg0;
     transition: all 0.3s ease-in-out;
 }
-
 #workspaces button.active{
     background-color: @fg;
     color: @bg0;
     min-width: 30px;
 }
-
 #clock{
     color: @fg;
 }
-
-#pulseaudio, #cpu, #custom-cpu-temp, #custom-gpu-temp, #memory {
+#language, #pulseaudio, #cpu, #custom-cpu-temp, #custom-gpu-temp, #memory {
     color: @fg;
     background-color: @bg0;
     padding: 0;
     border: 1px solid black;
     margin: 0;
 }
-
-/* Ordem: VOL | CPU | RAM */
-#pulseaudio {
+/* Ordem: LANG | VOL | CPU | RAM */
+#language {
     border-radius: 50px 0 0 50px;
     border-right: none;
 }
-
+#pulseaudio {
+    border-radius: 0;
+    border-right: none;
+}
 #cpu {
     border-radius: 0;
     border-right: none;
@@ -71,12 +65,10 @@ window#waybar{
     border-radius: 0;
     border-right: none;
 }
-
 #custom-gpu-temp {
     border-radius: 0;
     border-right: none;
 }
-
 #memory {
     border-radius: 0 50px 50px 0;
     margin: 0;

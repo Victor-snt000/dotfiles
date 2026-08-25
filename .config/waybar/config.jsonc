@@ -9,6 +9,7 @@
         "clock"
     ],
     "modules-right": [
+        "hyprland/language",
         "pulseaudio",
         "cpu",
         "custom/cpu-temp",
@@ -18,7 +19,8 @@
     "clock": {
         "interval": 60,
         "format": "{:%d-%m-%Y %A %H:%M}",
-        "max-length": 35
+        "max-length": 35,
+        "tooltip": false
     },
     "hyprland/workspaces": {
         "format": "{name}",
@@ -36,25 +38,35 @@
             "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         }
     },
-        "custom/cpu-temp": {
+    "hyprland/language": {
+        "format": " LAYOUT {} ",
+        "format-en": "US",
+        "format-pt": "BR",
+        "tooltip": false
+    },
+    "custom/cpu-temp": {
         "exec": "sensors | awk '/Package id 0/{print $4}' | tr -d '+'",
         "interval": 5,
-        "format": "| CPU {} "
+        "format": "| CPU {} ",
+        "tooltip": false
     },
     "custom/gpu-temp": {
         "exec": "sensors | awk '/edge:/ {print $2}' | head -n 1 | tr -d '+'",
         "interval": 5,
-        "format": "| GPU {} "
+        "format": "| GPU {} ",
+        "tooltip": false
     },
     "cpu": {
-    "interval": 5,
-        "format": "| CPU {usage}% "
+        "interval": 5,
+        "format": "| CPU {usage}% ",
+        "tooltip": false
     },
     "memory": {
-        "format": "| RAM {}% "
+        "format": "| RAM {}% ",
+        "tooltip": false
     },
     "pulseaudio": {
-        "format": "VOL {volume}% ",
+        "format": " | VOL {volume}% ",
         "format-muted": "VOL MUTED",
         "scroll-step": 1,
         "max-volume": 153,
@@ -63,6 +75,7 @@
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "ignored-sinks": [
             "Easy Effects Sink"
-        ]
+        ],
+        "tooltip": false
     }
 }
