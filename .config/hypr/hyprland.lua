@@ -67,6 +67,11 @@ hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume --limit 1.53 @
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { locked = true, repeating = true })
 hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true })
 
+-- Controle de Mídia (Spotify)
+hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("playerctl -p spotify previous"), { locked = true })
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("playerctl -p spotify play-pause"), { locked = true })
+hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd("playerctl -p spotify next"), { locked = true })
+
 -- Navegação
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
