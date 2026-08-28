@@ -20,6 +20,7 @@ Personal Linux desktop configuration for Arch Linux + Hyprland, kept close to th
 - **`fastfetch/`** - compact system summary shown on new terminal sessions.
 - **`starship.toml`** - shell prompt configuration.
 - **`gtk-3.0/`** and **`fontconfig/`** - desktop-wide theme and font preferences.
+- **`.zshrc`** - Zsh configuration with Oh My Zsh and Starship prompt.
 
 ## Desktop Notes
 
@@ -48,7 +49,7 @@ On startup, Hyprland launches `waybar`, `hyprpaper`, and `mako`.
 
 ## Setup
 
-This repository is meant to live at `~/.config`. It is not a universal installer, and some values are machine-specific, especially the monitor name/mode in `hypr/hyprland.lua`, cursor theme, and any hardware-specific tuning done outside these files.
+This repository is meant to live at `~/.config` (plus `.zshrc` in the home directory). It is not a universal installer, and some values are machine-specific, especially the monitor name/mode in `hypr/hyprland.lua`, cursor theme, and any hardware-specific tuning done outside these files.
 
 Core packages used by this setup include:
 
@@ -72,6 +73,7 @@ After placing the files, review:
 - `hypr/hyprpaper.conf` for wallpaper paths.
 - `waybar/config.jsonc` and `waybar/style.css` for bar modules and theme.
 - `kitty/kitty.conf` for font family and size.
+- `.zshrc` for Oh My Zsh plugins/theme and any machine-specific aliases.
 
 ## Scope
 
