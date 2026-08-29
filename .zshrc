@@ -1,7 +1,7 @@
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git sudo z extract command-not-found zsh-autosuggestions)
+plugins=(git sudo extract command-not-found zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # Prompt
