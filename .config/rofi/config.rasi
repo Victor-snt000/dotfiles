@@ -4,6 +4,7 @@ configuration {
     icon-theme: "Papirus-Dark";
     terminal: "kitty";
     drun-display-format: "{name}";
+    display-hyprwin: "window";
     hover-select: false;
     me-select-entry: "";
     me-accept-entry: "MousePrimary";

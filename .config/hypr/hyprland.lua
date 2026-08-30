@@ -50,7 +50,7 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "stylish
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("rofi -show window"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("rofi -show hyprwin -modes 'window,hyprwin:~/.config/rofi/scripts/hyprwin.sh' -show-icons"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | satty --filename - --output-filename ~/Pictures/Screenshots/screenshot-$(date +'%Y%m%d-%H%M%S').png"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("grim - | satty --filename - --output-filename ~/Pictures/Screenshots/screenshot-$(date +'%Y%m%d-%H%M%S').png"))
@@ -71,6 +71,11 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ to
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("playerctl -p spotify previous"), { locked = true })
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("playerctl -p spotify play-pause"), { locked = true })
 hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd("playerctl -p spotify next"), { locked = true })
+hl.bind(mainMod .. " + SHIFT + comma", hl.dsp.exec_cmd("playerctl -p spotify position 10-"), { locked = true, repeating = true })
+hl.bind(mainMod .. " + SHIFT + period", hl.dsp.exec_cmd("playerctl -p spotify position 10+"), { locked = true, repeating = true })
+hl.bind(mainMod .. " + SHIFT + slash", hl.dsp.exec_cmd("playerctl -p spotify loop Track"), { locked = true })
+hl.bind(mainMod .. " + ALT + comma", hl.dsp.exec_cmd("playerctl -p spotify volume 0.1-"), { locked = true, repeating = true })
+hl.bind(mainMod .. " + ALT + period", hl.dsp.exec_cmd("playerctl -p spotify volume 0.1+"), { locked = true, repeating = true })
 
 -- Navegação
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
