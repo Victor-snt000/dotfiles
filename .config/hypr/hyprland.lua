@@ -58,7 +58,20 @@ hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("grim -g \"$(hyprctl activewind
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.exit())
-hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + F", function()
+    local w = hl.get_active_window()
+    if w == nil then return end
+    local wasFloating = w.floating
+    hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+    if not wasFloating then
+        -- estava tiled, virou floating agora: aplica tamanho fixo e centraliza
+        local mon = hl.get_active_monitor()
+        local targetW = math.floor(mon.width * 0.8)
+        local targetH = math.floor(mon.height * 0.8)
+        hl.dispatch(hl.dsp.window.resize({ x = targetW, y = targetH, relative = false }))
+        hl.dispatch(hl.dsp.window.center())
+    end
+end)
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(home .. "/.config/hypr/set-wallpaper.sh"))
 
@@ -141,6 +154,15 @@ hl.window_rule({
     suppress_event = "maximize",
 })
 
+-- Smart gaps: remove gaps/borda/rounding quando só há 1 janela tiled no workspace
+-- (substitui o antigo no_gaps_when_only) — exemplo oficial da wiki
+hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = "f[1]", gaps_out = 0, gaps_in = 0 })
+hl.window_rule({ match = { float = false, workspace = "w[tv1]" }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = "w[tv1]" }, rounding = 0 })
+hl.window_rule({ match = { float = false, workspace = "f[1]" }, border_size = 0 })
+hl.window_rule({ match = { float = false, workspace = "f[1]" }, rounding = 0 })
+
 -- 7. CONFIGURAÇÕES GERAIS
 hl.config({
     input = {
@@ -181,6 +203,11 @@ hl.config({
     },
     dwindle = {
         preserve_split = true,
+        smart_split = false,
+        smart_resizing = true,
+        use_active_for_splits = true,
+        default_split_ratio = 1.0,
+        special_scale_factor = 0.8,
     },
     master = {
         new_status = "master",
