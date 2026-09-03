@@ -32,6 +32,7 @@ The main binds use `SUPER` with directional focus and movement:
 - `SUPER + D` opens the launcher (rofi).
 - `SUPER + E` opens the file manager (Thunar).
 - `SUPER + B` opens the browser.
+- `SUPER + W` / `C` / `G` / `P` / `N` / `O` opens Vesktop, VS Code, Steam, Spotify, Stremio, and Obsidian.
 - `SUPER + V` opens the window switcher (rofi).
 - `SUPER + arrow keys` moves focus between windows.
 - `SUPER + SHIFT + arrow keys` moves windows.
