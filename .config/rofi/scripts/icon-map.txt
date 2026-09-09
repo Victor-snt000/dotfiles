@@ -1,0 +1,3 @@
+com.stremio.stremio=com.stremio.Stremio|Stremio
+com.gabm.satty=satty|Satty
+org.keepassxc.KeePassXC=org.keepassxc.KeePassXC|KeePassXC
