@@ -7,6 +7,11 @@ if [ -n "$ROFI_RETV" ] && [ "$ROFI_RETV" = "1" ] && [ -n "$ROFI_INFO" ]; then
     exit 0
 fi
 
+if [ -n "$ROFI_RETV" ] && [ "$ROFI_RETV" = "3" ] && [ -n "$ROFI_INFO" ]; then
+    hyprctl dispatch "hl.dsp.window.close({window = 'address:$ROFI_INFO'})" > /dev/null 2>&1
+    exit 0
+fi
+
 hyprctl clients -j | jq -r '.[] | select(.mapped==true) | "\(.address)\u001f\(.class)"' | \
 while IFS=$'\x1f' read -r address class; do
     mapped=$(grep "^${class}=" "$MAP_FILE" 2>/dev/null)
