@@ -13,5 +13,6 @@ export TERMINAL=kitty
 export PATH=/home/victor/.opencode/bin:$PATH
 
 # Aliases
-alias bleachbit-root="xhost +SI:localuser:root && pkexec env DISPLAY=\$DISPLAY XAUTHORITY=\$XAUTHORITY WAYLAND_DISPLAY=\$WAYLAND_DISPLAY bleachbit"
+alias bleachbit-root="xhost +SI:localuser:root && sudo env DISPLAY=\$DISPLAY XAUTHORITY=\$HOME/.Xauthority WAYLAND_DISPLAY=\$WAYLAND_DISPLAY bleachbit"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+export PATH=~/.npm-global/bin:$PATH
