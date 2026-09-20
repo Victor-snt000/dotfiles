@@ -10,6 +10,7 @@
     ],
     "modules-right": [
         "hyprland/language",
+        "custom/weather",
         "pulseaudio",
         "cpu",
         "custom/cpu-temp",
@@ -42,6 +43,12 @@
         "format": " LAYOUT {} ",
         "format-en": "US",
         "format-pt": "BR",
+        "tooltip": false
+    },
+    "custom/weather": {
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "interval": 1800,
+        "format": " | {}",
         "tooltip": false
     },
     "custom/cpu-temp": {
