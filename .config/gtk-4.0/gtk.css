@@ -1,0 +1,21 @@
+:root {
+  --window-bg-color: #000000;
+  --window-fg-color: #e6e6e6;
+  --view-bg-color: #000000;
+  --view-fg-color: #e6e6e6;
+  --headerbar-bg-color: #000000;
+  --headerbar-fg-color: #e6e6e6;
+  --headerbar-border-color: #1a1a1a;
+  --sidebar-bg-color: #000000;
+  --sidebar-fg-color: #e6e6e6;
+  --secondary-sidebar-bg-color: #000000;
+  --card-bg-color: #0d0d0d;
+  --card-fg-color: #e6e6e6;
+  --popover-bg-color: #0d0d0d;
+  --popover-fg-color: #e6e6e6;
+  --dialog-bg-color: #000000;
+  --dialog-fg-color: #e6e6e6;
+  --accent-bg-color: #4a4a4a;
+  --accent-color: #cccccc;
+  --accent-fg-color: #ffffff;
+}
