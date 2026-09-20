@@ -24,10 +24,10 @@ hl.env("XCURSOR_THEME", "GoogleDot-Black")
 hl.env("XCURSOR_SIZE", "16")
 hl.env("HYPRCURSOR_THEME", "GoogleDot-Black")
 hl.env("HYPRCURSOR_SIZE", "16")
-hl.env("GTK_THEME", "Adwaita:dark")
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 hl.env("LD_PRELOAD", "")
 hl.env("QT_STYLE_OVERRIDE", "kvantum")
+hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("XDG_DATA_DIRS", "/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:" .. home .. "/.local/share/flatpak/exports/share")
 
 -- 4. ANIMAÇÕES & BEZIERS
