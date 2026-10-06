@@ -80,6 +80,7 @@ hl.bind(mainMod .. " + F", function()
 end)
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(home .. "/.config/hypr/set-wallpaper.sh"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("pidof hyprlock || hyprlock"))
 
 -- Controle de Volume
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume --limit 1.53 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
