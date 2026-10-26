@@ -34,15 +34,15 @@ The main binds use `SUPER` with directional focus and movement:
 - `SUPER + B` opens the browser.
 - `SUPER + W` / `C` / `G` / `P` / `N` / `O` opens Vesktop, VS Code, Steam, Spotify, Stremio, and Obsidian.
 - `SUPER + V` opens the window switcher (rofi).
-- `SUPER + arrow keys` moves focus between windows.
-- `SUPER + SHIFT + arrow keys` moves windows.
+- `SUPER + Arrow keys` moves focus between windows.
+- `SUPER + SHIFT + Arrow keys` moves windows.
 - `SUPER + F` toggles floating.
 - `SUPER + Q` closes the active window.
 - `SUPER + SHIFT + Q` exits Hyprland.
 - `SUPER + T` toggles a window group; `SUPER + Tab` / `SUPER + SHIFT + Tab` cycles through it.
 - `SUPER + R` reloads the Hyprland config.
 - `SUPER + SHIFT + R` refreshes the wallpaper.
-- `SUPER + ALT + R` enters a resize submap (arrow keys resize, `Escape`/`Return`/`SUPER + R` exits).
+- `SUPER + ALT + R` enters a resize submap (`Arrow keys` resize; `Escape` / `Return` / `SUPER + R` exits).
 - `SUPER + 1-0` switches workspaces; `SUPER + SHIFT + 1-0` moves the active window to a workspace.
 - `SUPER + S` / `SUPER + SHIFT + S` / `SUPER + ALT + S` take region, full, and active-window screenshots (`grim` + `slurp` + `satty`).
 
