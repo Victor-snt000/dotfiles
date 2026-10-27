@@ -32,19 +32,28 @@ The main binds use `SUPER` with directional focus and movement:
 - `SUPER + D` opens the launcher (rofi).
 - `SUPER + E` opens the file manager (Thunar).
 - `SUPER + B` opens the browser.
-- `SUPER + W` / `C` / `G` / `P` / `N` / `O` opens Vesktop, VS Code, Steam, Spotify, Stremio, and Obsidian.
+- `SUPER + W` opens Vesktop.
+- `SUPER + C` opens VS Code.
+- `SUPER + G` opens Steam.
+- `SUPER + P` opens Spotify.
+- `SUPER + N` opens Stremio.
+- `SUPER + O` opens Obsidian.
 - `SUPER + V` opens the window switcher (rofi).
 - `SUPER + Arrow keys` moves focus between windows.
 - `SUPER + SHIFT + Arrow keys` moves windows.
 - `SUPER + F` toggles floating.
 - `SUPER + Q` closes the active window.
 - `SUPER + SHIFT + Q` exits Hyprland.
-- `SUPER + T` toggles a window group; `SUPER + Tab` / `SUPER + SHIFT + Tab` cycles through it.
+- `SUPER + T` toggles a window group.
+- `SUPER + Tab` / `SUPER + SHIFT + Tab` cycles through a window group.
 - `SUPER + R` reloads the Hyprland config.
 - `SUPER + SHIFT + R` refreshes the wallpaper.
 - `SUPER + ALT + R` enters a resize submap (`Arrow keys` resize; `Escape` / `Return` / `SUPER + R` exits).
-- `SUPER + 1-0` switches workspaces; `SUPER + SHIFT + 1-0` moves the active window to a workspace.
-- `SUPER + S` / `SUPER + SHIFT + S` / `SUPER + ALT + S` take region, full, and active-window screenshots (`grim` + `slurp` + `satty`).
+- `SUPER + 1-0` switches workspaces.
+- `SUPER + SHIFT + 1-0` moves the active window to a workspace.
+- `SUPER + S` takes a region screenshot (`grim` + `slurp` + `satty`).
+- `SUPER + SHIFT + S` takes a full screenshot (`grim` + `slurp` + `satty`).
+- `SUPER + ALT + S` takes an active-window screenshot (`grim` + `slurp` + `satty`).
 
 On startup, Hyprland launches `waybar`, `hyprpaper`, and `mako`.
 
