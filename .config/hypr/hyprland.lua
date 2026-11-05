@@ -31,14 +31,12 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("XDG_DATA_DIRS", "/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:" .. home .. "/.local/share/flatpak/exports/share")
 
 -- 4. ANIMAÇÕES & BEZIERS
-hl.curve("smoothOut", { type = "bezier", points = { { 0.25, 0.9 }, { 0.35, 1.0 } } })
 hl.curve("smoothInOut", { type = "bezier", points = { { 0.4, 0.0 }, { 0.2, 1.0 } } })
 hl.curve("subtle", { type = "bezier", points = { { 0.22, 0.9 }, { 0.3, 1.0 } } })
 hl.curve("stylish", { type = "bezier", points = { { 0.2, 1.0 }, { 0.15, 1.0 } } })
 
 hl.animation({ leaf = "windows", enabled = true, speed = 6, bezier = "stylish", style = "popin 96%" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "smoothInOut", style = "popin 96%" })
-hl.animation({ leaf = "border", enabled = true, speed = 9, bezier = "subtle" })
 hl.animation({ leaf = "fade", enabled = true, speed = 5, bezier = "smoothInOut" })
 hl.animation({ leaf = "layersIn", enabled = true, speed = 5, bezier = "subtle", style = "slide bottom" })
 hl.animation({ leaf = "layersOut", enabled = true, speed = 4, bezier = "smoothInOut", style = "slide bottom" })
@@ -50,7 +48,7 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "stylish
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("rofi -show hyprwin -modes 'window,hyprwin:~/.config/rofi/scripts/hyprwin.sh' -show-icons"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("rofi -show hyprwin -modes 'window,hyprwin:" .. home .. "/.config/rofi/scripts/hyprwin.sh' -show-icons"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("vesktop"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("code"))
@@ -79,7 +77,6 @@ hl.bind(mainMod .. " + F", function()
     end
 end)
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprctl reload"))
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(home .. "/.config/hypr/set-wallpaper.sh"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("pidof hyprlock || hyprlock"))
 
 -- Controle de Volume
@@ -129,10 +126,10 @@ end
 -- Submap Resize
 hl.bind(mainMod .. " + ALT + R", hl.dsp.submap("resize"))
 hl.define_submap("resize", function()
-    hl.bind("left", hl.dsp.window.resize({ x = -30, y = 0, relative = true }))
-    hl.bind("right", hl.dsp.window.resize({ x = 30, y = 0, relative = true }))
-    hl.bind("up", hl.dsp.window.resize({ x = 0, y = -30, relative = true }))
-    hl.bind("down", hl.dsp.window.resize({ x = 0, y = 30, relative = true }))
+    hl.bind("left", hl.dsp.window.resize({ x = -30, y = 0, relative = true }), { repeating = true })
+    hl.bind("right", hl.dsp.window.resize({ x = 30, y = 0, relative = true }), { repeating = true })
+    hl.bind("up", hl.dsp.window.resize({ x = 0, y = -30, relative = true }), { repeating = true })
+    hl.bind("down", hl.dsp.window.resize({ x = 0, y = 30, relative = true }), { repeating = true })
     hl.bind(mainMod .. " + R", hl.dsp.submap("reset"))
     hl.bind("Escape", hl.dsp.submap("reset"))
     hl.bind("Return", hl.dsp.submap("reset"))
@@ -199,9 +196,6 @@ hl.config({
         smart_resizing = true,
         use_active_for_splits = true,
         default_split_ratio = 1.0,
-    },
-    master = {
-        new_status = "master",
     },
     misc = {
         force_default_wallpaper = 0,
