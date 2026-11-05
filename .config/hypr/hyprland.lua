@@ -159,7 +159,7 @@ hl.window_rule({ match = { float = false, workspace = "f[1]" }, rounding = 0 })
 hl.config({
     input = {
         kb_layout = "us,br",
-        kb_options = "grp:alt_caps_toggle",
+        kb_options = "grp:alt_space_toggle",
         follow_mouse = 1,
         sensitivity = 0,
         accel_profile = "flat",
@@ -199,7 +199,6 @@ hl.config({
         smart_resizing = true,
         use_active_for_splits = true,
         default_split_ratio = 1.0,
-        special_scale_factor = 0.8,
     },
     master = {
         new_status = "master",
@@ -215,4 +214,5 @@ hl.on("hyprland.start", function()
    hl.exec_cmd("waybar")
    hl.exec_cmd("hyprpaper")
    hl.exec_cmd("mako")
+   hl.exec_cmd("hyprsunset")
 end)
